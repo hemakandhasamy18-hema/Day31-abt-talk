@@ -1,0 +1,39 @@
+# 🔴⚪🔵 Day 31 – Sort Colors
+
+## 📌 Problem Statement
+Sort an array containing only `0`, `1`, and `2` without using built-in sorting functions.
+
+- `0` → Red capsules
+- `1` → White capsules
+- `2` → Blue capsules
+
+## 💡 Approach: Dutch National Flag Algorithm
+We use three pointers:
+
+- **low:** Boundary for red capsules.
+- **mid:** Current element being checked.
+- **high:** Boundary for blue capsules.
+
+### ⚙️ Algorithm
+1. If the current element is `0`, move it to the left section.
+2. If it is `1`, move the middle pointer forward.
+3. If it is `2`, move it to the right section.
+4. Continue until `mid > high`.
+
+We skip swaps when both positions are the same to avoid unnecessary operations.
+
+## 🧪 Example
+**Input:** `[2, 0, 2, 1, 1, 0]`
+
+**Output:** `[0, 0, 1, 1, 1, 2]`
+
+## ⏱️ Complexity Analysis
+- **Time Complexity:** `O(n)` — each element is processed in a single pass.
+- **Auxiliary Space:** `O(1)` — sorting is performed in place.
+- **Built-in Sorting:** Not used.
+
+## 🌍 Real-World Impact
+Sorting techniques are useful in inventory management, logistics, databases, and search systems.
+
+## 🚀 Key Learning
+Learned three-pointer optimization, in-place sorting, swap reduction, and pointer visualization.
